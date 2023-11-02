@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Mars Photos Dashboard</title>
+    <link href="./css/common.css" rel="preload" as="style"/>
+    <link href="./css/main.css" rel="preload" as="style"/>
+    <link href="./css/content.css" rel="preload" as="style"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/immutable/4.3.2/immutable.min.js" type="text/javascript" async></script>
+    <script src="./scripts/userInteractionHandler.js" type="text/javascript" async></script>
+    <script src="./scripts/backendApiHandler.js" type="text/javascript" async></script>
+    <script src="./scripts/photosData.js" type="text/javascript" async></script>
+    <script src="./scripts/apiInput.js" type="text/javascript" async></script>
+    <script src="./scripts/contentCreator.js" type="text/javascript" async></script>
+    <script src="./scripts/tabContentCreator.js" type="text/javascript" async></script>
+    <script src="./scripts/htmlHelper.js" type="text/javascript" async></script>
+
+    <link href="./css/common.css" rel="stylesheet"/>
+    <link href="./css/main.css" rel="stylesheet" />
+    <link href="./css/content.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="header"><span>Mars Photos Dashboard</span></div>
+    <div id="container">
+        <div id="left-pane">
+            <form action="#" method="get">
+                <label for="rover" class="input-label">Rover Name</label> <br>
+                <select id="rover" class="input-element">
+                    <option value="curiosity">Curiosity</option>
+                    <option value="opportunity">Opportunity</option>
+                    <option value="spirit">Spirit</option>
+                    <option value="perseverance">Perseverance</option>
+                </select> <br>
+
+                <label for="earth-date" class="input-label">Earth Date</label> <br>
+                <input type="date" id="earth-date" class="input-element" value="2010-01-01" min="2004-01-04" max="" /> <br>
+
+                <input type="hidden" id="cameras" value="" />
+
+                <input type="submit" id="submit-button" value="Get Photos" />
+            </form>
+        </div>
+        <div id="content-container">
+            <div id="default-content-area">
+                Please select rover name and earth date in the left pane to see Mars photos
+            </div>
+        </div>
+    </div>
+    <footer id="footer-container">
+        <small>Information about Mars in this webpage are gathered from NASA API. Refer README for details about references.
+        </small>
+    </footer>
+</body>
+</html>
